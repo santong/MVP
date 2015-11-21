@@ -13,7 +13,7 @@ import me.santong.mvp.model.ImpMessageData;
 import me.santong.mvp.presenter.Contact;
 import me.santong.mvp.R;
 import me.santong.mvp.model.Message;
-import me.santong.mvp.presenter.Present;
+import me.santong.mvp.presenter.Presenter;
 
 /**
  * Created by santong.
@@ -40,7 +40,7 @@ public class MessageFragment extends Fragment implements Contact.View  {
         super.onActivityCreated(savedInstanceState);
         setRetainInstance(true);
 
-        userListener = new Present(this, new ImpMessageData());
+        userListener = new Presenter(this, new ImpMessageData());
     }
 
     @Override
